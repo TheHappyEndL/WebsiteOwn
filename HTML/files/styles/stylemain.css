@@ -1,0 +1,135 @@
+*{box-sizing: border-box;}
+/**/
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: "Cascadia Code", "Cascadia Mono" , Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: url("../images/bg1.jpg" ) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.dark{
+    background: url("../images/bg2.jpg" ) no-repeat center center fixed;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+/*Changes the box for Light/Dark-Mode*/
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+    box-shadow: rgb(28 32 93 / 24%) 3px 8px 12px 3px;
+}
+/*Circle in the chec*/
+input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(127, 127, 127, 1);
+    border-radius: 50px;
+}
+input[type="checkbox"]:checked:before{
+    transform: translate(100%);
+}
+input[type="checkbox"]:checked{
+    background-image: url("../images/bg1.jpg");
+}
+
+
+header{
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 435px;
+}
+
+header > img{
+    width: 100%;
+    bottom: 0;
+    padding: 3px 12px;
+    max-width: 1120px;
+}
+
+header h1{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 7px;
+    background-color: rgba(1, 1, 1, 0.6);
+    backdrop-filter: blur(10px) saturate(130%) contrast(150%);
+    padding: 3px 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 985px;
+}
+
+h1, h2{
+    color: azure;
+}
+
+h1{
+    margin: 10px;
+}
+/*Link Box Settings*/
+ul{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0 auto;
+    padding: 50px;
+    min-width: 375px;
+    max-width: 375px;
+}
+/*Link Box Inside Settings*/
+ul > li{
+    background-color: rgba(1, 1, 1, 0.5);
+    backdrop-filter: blur(10px) saturate(130%) contrast(150%);
+    border-radius: 80px;
+    padding: 3px 12px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+ul > li:hover{
+    background-color: rgba(1, 1, 1, 0.7);
+    backdrop-filter: blur(10px) saturate(130%) contrast(150%);
+    border-radius: 80px;
+    padding: 3px 12px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+/*Link Text Settings*/
+ul > li > a{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+a{
+    color: azure;
+    text-decoration: none;
+}
+
+/*Visible none*/
